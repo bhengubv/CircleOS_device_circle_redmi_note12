@@ -15,6 +15,17 @@
 
 $(call inherit-product, device/circle/common/common.mk)
 
+# ── A/B OTA ──────────────────────────────────────────────────────────────────
+AB_OTA_UPDATER    := true
+AB_OTA_PARTITIONS := boot dtbo system system_ext vendor vendor_dlkm vbmeta
+
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_verifier \
+    update_engine_client \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-service
+
 PRODUCT_NAME         := circle_redmi_note12
 PRODUCT_DEVICE       := sky
 PRODUCT_MODEL        := Circle Phone (Redmi Note 12)
