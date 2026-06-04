@@ -59,9 +59,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
     ro.soc.model=SM6225 \
-    ro.circle.device.tier=midrange \
-    ro.circle.device.codename=sky \
-    ro.circle.device.min_supported=true
+    ro.vendor.circle.device.tier=midrange \
+    ro.vendor.circle.device.codename=sky \
+    ro.vendor.circle.device.min_supported=true
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
@@ -89,7 +89,7 @@ BOARD_HOSTAPD_DRIVER          := NL80211
 # Circle privacy service tuning for mid-range SoC
 # Privacy daemons run at background priority to not impact foreground
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.circle.kernel.kaslr=true \
-    ro.circle.kernel.seccomp=true \
-    ro.circle.kernel.lockdown=false \
-    ro.circle.perf.privacy_daemon_priority=background
+    ro.vendor.circle.kernel.kaslr=true \
+    ro.vendor.circle.kernel.seccomp=true \
+    ro.vendor.circle.kernel.lockdown=false \
+    ro.vendor.circle.perf.privacy_daemon_priority=background
